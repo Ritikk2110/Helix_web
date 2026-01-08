@@ -17,7 +17,7 @@
     <meta property="og:title" content="Helix Clinic & Diagnostic Labs - Leading You To Better Health">
     <meta property="og:description" content="Affordable diagnostic tests with home collection service in Lucknow. Accurate & Fast Reporting.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.helixclinic.com">
+    <meta property="og:url" content="https://www.helixdiagnostic.in/">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,8 +27,11 @@
     
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="gallery.css">
+
+    <link rel="icon" href="image.png" type="image/x-icon">
+    <link rel="shortcut icon" href="image.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">   
@@ -84,6 +87,7 @@
                 <li><a onclick="showPage('about')">About Us</a></li>
                 <li><a onclick="showPage('services')">Services</a></li>
                 <li><a onclick="showPage('booking')">Book Collection</a></li>
+                <li><a onclick="showPage('gallery')">Gallery</a></li>
                 <li><a onclick="showPage('testimonials')">Testimonials</a></li>
                 <li><a onclick="showPage('contact')">Contact</a></li>
             </ul>
@@ -210,7 +214,39 @@
                         <div class="price">₹299</div>
                         <a href="#" class="book-btn" onclick="showPage('booking')">Book Now</a>
                     </div>
+                    <div class="package-card">
+                        <div class="package-icon">
+                            <i class="fas fa-prescription-bottle"></i>
+                        </div>
+                        <h3>Hormonal & Endocrine Tests</h3>
+                        <div class="package-tests">
+                            	Thyroid Antibodies (Anti-TPO, Anti-TG)
+	Serum Cortisol (AM/PM)
+	Insulin (Fasting / Postprandial)
+	LH, FSH, Prolactin
+	Testosterone (Total/Free)
+	DHEA-S 	AMH (Anti-Müllerian Hormone)
+
+                        </div>
+                        <div class="price">₹199</div>
+                        <a href="#" class="book-btn" onclick="showPage('booking')">Book Now</a>
+                    </div>
+
+                    <div class="package-card">
+                        <div class="package-icon">
+                            <i class="fas fa-prescription-bottle"></i>
+                        </div>
+                        <h3>Vitamin & Nutritional Tests</h3>
+                        <div class="package-tests">
+                        	Vitamin D (25-OH)	Vitamin B12	Folate	Copper, Zinc	Iron Studies (Iron, TIBC, Transferrin Saturation)
+
+ 
+                        </div>
+                        <div class="price">₹199</div>
+                        <a href="#" class="book-btn" onclick="showPage('booking')">Book Now</a>
+                    </div>
                 </div>
+                
 
                 <!-- Wellness Packages -->
                 <div class="wellness-section">
@@ -235,6 +271,7 @@
                         <div class="wellness-card featured">
                             <div class="package-badge">MOST POPULAR</div>
                             <h3>Package 2</h3>
+                            
                             <div class="price" style="color: var(--yellow);">₹899</div>
                             <ul>
                                 <li><i class="fas fa-check-circle"></i> Blood Sugar</li>
@@ -277,8 +314,11 @@
                 <p class="section-subtitle">Your Trusted Partner in Health Care</p>
                 
                 <div class="about-content">
-                    <div class="about-image">
-                        <i class="fas fa-hospital-alt"></i>
+                    <div class="about-imagee">
+                        <i style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                            <img src="image.png" alt="Helix Clinic & Diagnostic Labs Building">
+
+                        </i>
                     </div>
                     <div class="about-text">
                         <h2>Leading You To Better Health</h2>
@@ -438,139 +478,7 @@
         </section>
     </div>
 
-    <!-- BOOKING PAGE -->
-    <div id="booking" class="page-section">
-        <section class="booking-form">
-            <div class="container">
-                <h2 class="section-title">Book Home Sample Collection</h2>
-                <p class="section-subtitle">Fill out the form below and our team will contact you to schedule your home collection</p>
-                
-                <div class="form-container">
-                    <form id="bookingForm" onsubmit="handleFormSubmit(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="fullName">Full Name *</label>
-                                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="age">Age *</label>
-                                <input type="number" id="age" name="age"  placeholder="Enter age" min="1" max="99">
-                            </div>
-                        </div>
-                         <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Mobile Number *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email (Optional)</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="address">Full Address *</label>
-                            <textarea id="address" name="address" required placeholder="Enter complete address for home collection"></textarea>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="testType">Select Test/Package *</label>
-                                <select id="testType" name="testType" required>
-                                    <option value="">-- Select Test or Package --</option>
-                                    <optgroup label="Popular Tests">
-                                        <option value="Thyroid Profile - ₹149">Thyroid Profile - ₹149</option>
-                                        <option value="Liver Function Test - ₹199">Liver Function Test - ₹199</option>
-                                        <option value="Lipid Profile - ₹249">Lipid Profile - ₹249</option>
-                                        <option value="Kidney Function Test - ₹299">Kidney Function Test - ₹299</option>
-                                    </optgroup>
-                                    <optgroup label="Wellness Packages">
-                                        <option value="Package 1 - ₹649">Package 1 (Basic) - ₹649</option>
-                                        <option value="Package 2 - ₹899">Package 2 (Popular) - ₹899</option>
-                                        <option value="Package 3 - ₹1499">Package 3 (Premium) - ₹1499</option>
-                                    </optgroup>
-                                    <optgroup label="Other Tests">
-                                        <option value="CBC - Complete Blood Count">CBC - Complete Blood Count</option>
-                                        <option value="HbA1C">HbA1C (Diabetes Control)</option>
-                                        <option value="Vitamin D">Vitamin D</option>
-                                        <option value="Other">Other (Specify in message)</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="collectionDate">Preferred Collection Date *</label>
-                                <input type="date" id="collectionDate" name="collectionDate" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="collectionTime">Preferred Time Slot *</label>
-                                <select id="collectionTime" name="collectionTime" required>
-                                    <option value="">-- Select Time Slot --</option>
-                                    <option value="7:00 AM - 9:00 AM">7:00 AM - 9:00 AM</option>
-                                    <option value="9:00 AM - 11:00 AM">9:00 AM - 11:00 AM</option>
-                                    <option value="11:00 AM - 1:00 PM">11:00 AM - 1:00 PM</option>
-                                    <option value="1:00 PM - 3:00 PM">1:00 PM - 3:00 PM</option>
-                                    <option value="3:00 PM - 5:00 PM">3:00 PM - 5:00 PM</option>
-                                    <option value="5:00 PM - 7:00 PM">5:00 PM - 7:00 PM</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Additional Instructions (Optional)</label>
-                            <textarea id="message" name="message" placeholder="Any special instructions or requirements..."></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i> Submit Booking Request
-                        </button>
-                    
-                            </div>
-                            
-                        </div>
-                        
-                       
-
-                        <div class="success-message" id="successMessage">
-                            <i class="fas fa-check-circle"></i> Thank you! Your booking request has been submitted successfully. Our team will contact you shortly.
-                        </div>
-                    </form>
-                </div>
-
-                <div class="booking-info">
-                    <div class="info-box">
-                        <h3><i class="fas fa-info-circle"></i> Important Information</h3>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Home collection is available across Lucknow</li>
-                            <li><i class="fas fa-check"></i> Fasting may be required for certain tests</li>
-                            <li><i class="fas fa-check"></i> Reports will be delivered within 24-48 hours</li>
-                            <li><i class="fas fa-check"></i> Please keep your prescription ready (if any)</li>
-                            <li><i class="fas fa-check"></i> Our phlebotomist will carry proper ID and equipment</li>
-                        </ul>
-                    </div>
-
-                    <div class="info-box">
-                        <h3><i class="fas fa-phone-alt"></i> Need Help?</h3>
-                        <p>Call us directly for immediate booking:</p>
-                        <div class="phone-numbers">
-                            <a href="tel:8318462292"><i class="fas fa-phone"></i> 8318462292</a>
-                            <a href="tel:7398687342"><i class="fas fa-phone"></i> 7398687342</a>
-                        </div>
-                        <p style="margin-top: 20px;">Or WhatsApp us:</p>
-                        <a href="https://wa.me/918318462292" class="whatsapp-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
+    
     <!-- TESTIMONIALS PAGE -->
     <div id="testimonials" class="page-section">
         <section class="testimonials">
@@ -773,6 +681,726 @@
         </section>
     </div>
 
+
+
+
+
+
+
+
+
+    <div id="gallery" class="page-section">
+    
+    <!-- Gallery Hero Banner -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-content">
+            <h1><i class="fas fa-images"></i> Our Gallery</h1>
+            <p>Explore our state-of-the-art facility, expert team & departments</p>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 1: DIRECTOR'S MESSAGE ===== -->
+    <section class="director-section">
+        <div class="container">
+            <h2 class="section-title">Message from Our Director</h2>
+            <p class="section-subtitle">A word from the founder of Helix Clinic & Diagnostic Labs</p>
+
+            <div class="director-card">
+                <div class="director-image-box">
+                    <div class="director-image">
+                        <img src="https://via.placeholder.com/350x420/2563eb/ffffff?text=Director+Photo" alt="Dr. Rajesh Kumar Sharma - Founder & Director of Helix Clinic">
+                        <div class="image-frame"></div>
+                    </div>
+                    <div class="director-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Founder & Director</span>
+                    </div>
+                </div>
+
+                <div class="director-content">
+                    <div class="quote-mark">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+
+                    <h3>Dr. Vijay Soren </h3>
+                    <p class="designation">MBBS, MD (Pathology KGMU )</p>
+                    <p class="role">Founder & Director - Helix Clinic & Diagnostic Labs</p>
+                    
+                    <div class="director-message">
+                        <p><strong>Dear Valued Patients,</strong></p>
+                        <p>
+                            Welcome to Helix Clinic & Diagnostic Labs. It gives me immense pleasure to introduce 
+                            our diagnostic center that has been serving the people of Lucknow with dedication and 
+                            commitment to excellence since its inception.
+                        </p>
+                        <p>
+                            Our mission is simple yet profound - to provide accurate, reliable, and affordable 
+                            diagnostic services to every family. With over 15 years of experience in pathology 
+                            and diagnostics, we have assembled a team of dedicated professionals who share our 
+                            vision of making quality healthcare accessible to all.
+                        </p>
+                        <p>
+                            At Helix Clinic, we believe that early and accurate diagnosis is the first step 
+                            towards effective treatment. That's why we have invested in state-of-the-art 
+                            equipment and follow stringent quality control measures to ensure the highest 
+                            standards of accuracy.
+                        </p>
+                        <p>
+                            Thank you for choosing Helix Clinic & Diagnostic Labs. We are honored to be your 
+                            trusted partner in health.
+                        </p>
+                        <p class="closing">Wishing you good health always,</p>
+                    </div>
+
+                    <div class="director-signature">
+                        <div class="signature-line"></div>
+                        <span class="signature-name">Dr. Vijay Soren</span>
+                        <span class="signature-title">Founder & Director</span>
+                    </div>
+
+                    <div class="director-social">
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:director@helixclinic.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:8318462292" title="Phone"><i class="fas fa-phone-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 2: OUR TEAM ===== -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Expert Team</h2>
+            <p class="section-subtitle">Dedicated professionals committed to your health</p>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="https://via.placeholder.com/300x340/8b5cf6/ffffff?text=Dr.+Priya" alt="Dr. Priya Sharma - Co-Founder">
+                        <div class="team-hover">
+                            <div class="team-social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-details">
+                        <h4>Dr. Priya Sharma</h4>
+                        <p class="team-qualification">MBBS, MD (Biochemistry)</p>
+                        <span class="team-position">Co-Founder & Chief Pathologist</span>
+                        <p class="team-exp"><i class="fas fa-briefcase"></i> 12+ Years Experience</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="https://via.placeholder.com/300x340/10b981/ffffff?text=Mr.+Amit" alt="Mr. Amit Verma - Lab In-Charge">
+                        <div class="team-hover">
+                            <div class="team-social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-details">
+                        <h4>Mr. Amit Verma</h4>
+                        <p class="team-qualification">M.Sc (Medical Biochemistry)</p>
+                        <span class="team-position">Laboratory In-Charge</span>
+                        <p class="team-exp"><i class="fas fa-briefcase"></i> 10+ Years Experience</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="https://via.placeholder.com/300x340/fbbf24/1f2937?text=Ms.+Neha" alt="Ms. Neha Singh - Operations Manager">
+                        <div class="team-hover">
+                            <div class="team-social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-details">
+                        <h4>Ms. Neha Singh</h4>
+                        <p class="team-qualification">MBA (Healthcare Management)</p>
+                        <span class="team-position">Operations Manager</span>
+                        <p class="team-exp"><i class="fas fa-briefcase"></i> 8+ Years Experience</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="https://via.placeholder.com/300x340/ef4444/ffffff?text=Dr.+Sanjay" alt="Dr. Sanjay Gupta - Consultant Microbiologist">
+                        <div class="team-hover">
+                            <div class="team-social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-details">
+                        <h4>Dr. Sanjay Gupta</h4>
+                        <p class="team-qualification">MBBS, MD (Microbiology)</p>
+                        <span class="team-position">Consultant Microbiologist</span>
+                        <p class="team-exp"><i class="fas fa-briefcase"></i> 15+ Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 3: OUR DEPARTMENTS ===== -->
+    <section class="dept-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-building"></i> Our Departments</h2>
+            <p class="section-subtitle">Specialized diagnostic services across multiple departments</p>
+
+            <div class="dept-grid">
+                <!-- Department 1: Clinical Pathology -->
+                <div class="dept-card">
+                    <div class="dept-img">
+                        <img src="https://via.placeholder.com/500x320/2563eb/ffffff?text=Clinical+Pathology" alt="Clinical Pathology Department">
+                        <div class="dept-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                    </div>
+                    <div class="dept-info">
+                        <h4>Clinical Pathology</h4>
+                        <p>Complete blood analysis including CBC, blood grouping, ESR, and routine examinations with highest accuracy.</p>
+                        <ul class="dept-tests-list">
+                            <li><i class="fas fa-check-circle"></i> Complete Blood Count (CBC)</li>
+                            <li><i class="fas fa-check-circle"></i> Blood Grouping & Rh Typing</li>
+                            <li><i class="fas fa-check-circle"></i> ESR & Peripheral Smear</li>
+                            <li><i class="fas fa-check-circle"></i> Urine & Stool Routine</li>
+                        </ul>
+                        <div class="dept-footer">
+                            <span class="tests-count"><i class="fas fa-flask"></i> 25+ Tests</span>
+                            <a href="#" onclick="showPage('services')" class="dept-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department 2: Biochemistry -->
+                <div class="dept-card">
+                    <div class="dept-img">
+                        <img src="https://via.placeholder.com/500x320/8b5cf6/ffffff?text=Biochemistry+Lab" alt="Biochemistry Department">
+                        <div class="dept-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                    </div>
+                    <div class="dept-info">
+                        <h4>Biochemistry</h4>
+                        <p>Advanced biochemical analysis for comprehensive health assessment including organ function tests.</p>
+                        <ul class="dept-tests-list">
+                            <li><i class="fas fa-check-circle"></i> Liver Function Test (LFT)</li>
+                            <li><i class="fas fa-check-circle"></i> Kidney Function Test (KFT)</li>
+                            <li><i class="fas fa-check-circle"></i> Lipid Profile Complete</li>
+                            <li><i class="fas fa-check-circle"></i> Blood Sugar & HbA1C</li>
+                        </ul>
+                        <div class="dept-footer">
+                            <span class="tests-count"><i class="fas fa-flask"></i> 40+ Tests</span>
+                            <a href="#" onclick="showPage('services')" class="dept-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department 3: Hormones & Endocrinology -->
+                <div class="dept-card">
+                    <div class="dept-img">
+                        <img src="https://via.placeholder.com/500x320/fbbf24/1f2937?text=Hormone+Testing" alt="Hormone Testing Department">
+                        <div class="dept-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <div class="dept-info">
+                        <h4>Hormones & Endocrinology</h4>
+                        <p>Comprehensive hormone profiling including thyroid function, fertility hormones, and vitamin assays.</p>
+                        <ul class="dept-tests-list">
+                            <li><i class="fas fa-check-circle"></i> Thyroid Profile (T3, T4, TSH)</li>
+                            <li><i class="fas fa-check-circle"></i> Vitamin D & Vitamin B12</li>
+                            <li><i class="fas fa-check-circle"></i> Fertility Hormones</li>
+                            <li><i class="fas fa-check-circle"></i> Testosterone & Prolactin</li>
+                        </ul>
+                        <div class="dept-footer">
+                            <span class="tests-count"><i class="fas fa-flask"></i> 30+ Tests</span>
+                            <a href="#" onclick="showPage('services')" class="dept-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department 4: Microbiology -->
+                <div class="dept-card">
+                    <div class="dept-img">
+                        <img src="https://via.placeholder.com/500x320/10b981/ffffff?text=Microbiology+Lab" alt="Microbiology Department">
+                        <div class="dept-icon">
+                            <i class="fas fa-bacteria"></i>
+                        </div>
+                    </div>
+                    <div class="dept-info">
+                        <h4>Microbiology</h4>
+                        <p>Culture and sensitivity testing for accurate identification of infections and antibiotic selection.</p>
+                        <ul class="dept-tests-list">
+                            <li><i class="fas fa-check-circle"></i> Urine Culture & Sensitivity</li>
+                            <li><i class="fas fa-check-circle"></i> Blood Culture</li>
+                            <li><i class="fas fa-check-circle"></i> Stool Culture</li>
+                            <li><i class="fas fa-check-circle"></i> Wound Swab Culture</li>
+                        </ul>
+                        <div class="dept-footer">
+                            <span class="tests-count"><i class="fas fa-flask"></i> 20+ Tests</span>
+                            <a href="#" onclick="showPage('services')" class="dept-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department 5: Serology -->
+                <div class="dept-card">
+                    <div class="dept-img">
+                        <img src="https://via.placeholder.com/500x320/ef4444/ffffff?text=Serology+Lab" alt="Serology Department">
+                        <div class="dept-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                    </div>
+                    <div class="dept-info">
+                        <h4>Serology & Immunology</h4>
+                        <p>Infectious disease testing including HIV, Hepatitis, Dengue, Typhoid, and COVID-19 screening.</p>
+                        <ul class="dept-tests-list">
+                            <li><i class="fas fa-check-circle"></i> HIV Testing</li>
+                            <li><i class="fas fa-check-circle"></i> Hepatitis B & C</li>
+                            <li><i class="fas fa-check-circle"></i> Dengue & Typhoid</li>
+                            <li><i class="fas fa-check-circle"></i> COVID-19 RT-PCR</li>
+                        </ul>
+                        <div class="dept-footer">
+                            <span class="tests-count"><i class="fas fa-flask"></i> 15+ Tests</span>
+                            <a href="#" onclick="showPage('services')" class="dept-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department 6: Special Tests -->
+                <div class="dept-card">
+                    <div class="dept-img">
+                        <img src="https://via.placeholder.com/500x320/6366f1/ffffff?text=Special+Tests" alt="Special Tests Department">
+                        <div class="dept-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                    </div>
+                    <div class="dept-info">
+                        <h4>Special & Advanced Tests</h4>
+                        <p>Specialized testing including tumor markers, cardiac markers, allergy testing, and diagnostics.</p>
+                        <ul class="dept-tests-list">
+                            <li><i class="fas fa-check-circle"></i> PSA & Tumor Markers</li>
+                            <li><i class="fas fa-check-circle"></i> Cardiac Markers</li>
+                            <li><i class="fas fa-check-circle"></i> Allergy Testing</li>
+                            <li><i class="fas fa-check-circle"></i> Iron Studies</li>
+                        </ul>
+                        <div class="dept-footer">
+                            <span class="tests-count"><i class="fas fa-flask"></i> 35+ Tests</span>
+                            <a href="#" onclick="showPage('services')" class="dept-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 4: FACILITY GALLERY ===== -->
+    <section class="facility-gallery-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-images"></i> Our Facility</h2>
+            <p class="section-subtitle">Take a look at our modern diagnostic center and equipment</p>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="filter-btn" data-filter="lab">
+                    <i class="fas fa-flask"></i> Laboratory
+                </button>
+                <button class="filter-btn" data-filter="equipment">
+                    <i class="fas fa-microscope"></i> Equipment
+                </button>
+                <button class="filter-btn" data-filter="reception">
+                    <i class="fas fa-door-open"></i> Reception
+                </button>
+                <button class="filter-btn" data-filter="collection">
+                    <i class="fas fa-syringe"></i> Collection
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="facility-grid">
+                <!-- Image 1 -->
+                <div class="facility-item" data-category="lab">
+                    <img src="Picture4.png" alt="Main Laboratory">
+                    <div class="facility-overlay">
+                        <h5>Main Laboratory</h5>
+                        <p>State-of-the-art testing facility</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/2563eb/ffffff?text=Main+Laboratory', 'Main Laboratory')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="facility-item" data-category="lab">
+                    <img src="Picture1.jpg" alt="Biochemistry Lab">
+                    <div class="facility-overlay">
+                        <h5>Biochemistry Lab</h5>
+                        <p>Advanced biochemistry analysis</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/8b5cf6/ffffff?text=Biochemistry+Lab', 'Biochemistry Lab')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="facility-item" data-category="equipment">
+                    <img src="Picture1.jpg" alt="Auto Analyzer">
+                    <div class="facility-overlay">
+                        <h5>Fully Automated Analyzer</h5>
+                        <p>High-precision testing equipment</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/10b981/ffffff?text=Auto+Analyzer', 'Fully Automated Analyzer')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="facility-item" data-category="reception">
+                    <img src="Picture1.jpg" alt="Reception Area">
+                    <div class="facility-overlay">
+                        <h5>Reception Area</h5>
+                        <p>Comfortable waiting area</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/fbbf24/1f2937?text=Reception+Area', 'Reception Area')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="facility-item" data-category="collection">
+                    <img src="Picture1.jpg" alt="Sample Collection Room">
+                    <div class="facility-overlay">
+                        <h5>Sample Collection Room</h5>
+                        <p>Hygienic collection facility</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/ef4444/ffffff?text=Sample+Collection', 'Sample Collection Room')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="facility-item" data-category="equipment">
+                    <img src="Picture6.png" alt="Hematology Analyzer">
+                    <div class="facility-overlay">
+                        <h5>Hematology Analyzer</h5>
+                        <p>5-part differential analyzer</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/6366f1/ffffff?text=Hematology+Analyzer', 'Hematology Analyzer')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 7 -->
+                <div class="facility-item" data-category="lab">
+                    <img src="Picture5.jpg" alt="Microbiology Section">
+                    <div class="facility-overlay">
+                        <h5>Microbiology Section</h5>
+                        <p>Culture and sensitivity testing</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/0ea5e9/ffffff?text=Microbiology+Section', 'Microbiology Section')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 8 -->
+                <div class="facility-item" data-category="reception">
+                    <img src="Picture4.png" alt="Waiting Lounge">
+                    <div class="facility-overlay">
+                        <h5>Patient Waiting Lounge</h5>
+                        <p>Air-conditioned comfort</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/f59e0b/ffffff?text=Waiting+Lounge', 'Patient Waiting Lounge')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 9 -->
+                <div class="facility-item" data-category="equipment">
+                    <img src="Picture3.jpg" alt="Hormone Analyzer">
+                    <div class="facility-overlay">
+                        <h5>Hormone Analyzer</h5>
+                        <p>CLIA-based immunoassay</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/14b8a6/ffffff?text=Hormone+Analyzer', 'Hormone Analyzer')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 10 -->
+                <div class="facility-item" data-category="collection">
+                    <img src="Picture2.jpg" alt="Home Collection Service">
+                    <div class="facility-overlay">
+                        <h5>Home Collection Service</h5>
+                        <p>Professional home phlebotomy</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/ec4899/ffffff?text=Home+Collection', 'Home Collection Service')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 11 -->
+                <div class="facility-item" data-category="lab">
+                    <img src="Picture1.jpg" alt="Report Section">
+                    <div class="facility-overlay">
+                        <h5>Report Generation</h5>
+                        <p>Digital reporting system</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/84cc16/ffffff?text=Report+Section', 'Report Generation')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image 12 -->
+                <div class="facility-item" data-category="reception">
+                    <img src="entrance.jpg" alt="Main Entrance">
+                    <div class="facility-overlay">
+                        <h5>Main Entrance</h5>
+                        <p>Welcome to Helix Clinic</p>
+                        <button class="zoom-btn" onclick="openGalleryModal('https://via.placeholder.com/1200x800/a855f7/ffffff?text=Main+Entrance', 'Main Entrance')">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 5: CERTIFICATIONS ===== -->
+    <section class="certifications-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications & Achievements</h2>
+            <p class="section-subtitle">Our commitment to quality and excellence</p>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>NABL Accredited</h4>
+                    <p>Certified by National Accreditation Board for Testing and Calibration Laboratories</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h4>ISO 15189:2012</h4>
+                    <p>International Standard for Medical Laboratories Quality Management</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Best Lab Award 2023</h4>
+                    <p>Recognized as Best Diagnostic Lab in Lucknow by Healthcare Excellence Awards</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>10,000+ Happy Patients</h4>
+                    <p>Trusted by thousands of families for accurate and reliable diagnostics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery CTA Section -->
+    <section class="gallery-cta">
+        <div class="gallery-cta-content">
+            <h2>Ready to Book Your Test?</h2>
+            <p>Experience the best diagnostic services with home collection facility</p>
+            <div class="gallery-cta-buttons">
+                <a href="#" onclick="showPage('booking')" class="cta-btn-primary">
+                    <i class="fas fa-calendar-check"></i> Book Home Collection
+                </a>
+                <a href="tel:8318462292" class="cta-btn-secondary">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- GALLERY IMAGE MODAL -->
+<div class="gallery-modal" id="galleryModal">
+    <button class="modal-close" onclick="closeGalleryModal()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="modal-content">
+        <img src="" alt="" id="modalImage">
+        <p class="modal-caption" id="modalCaption"></p>
+    </div>
+</div>
+
+
+
+
+
+<!-- BOOKING PAGE -->
+    <div id="booking" class="page-section">
+        <section class="booking-form">
+            <div class="container">
+                <h2 class="section-title">Book Home Sample Collection</h2>
+                <p class="section-subtitle">Fill out the form below and our team will contact you to schedule your home collection</p>
+                
+                <div class="form-container">
+                    <form id="bookingForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="age">Age *</label>
+                                <input type="number" id="age" name="age"  placeholder="Enter age" min="1" max="99">
+                            </div>
+                        </div>
+                         <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Mobile Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email (Optional)</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Full Address *</label>
+                            <textarea id="address" name="address" required placeholder="Enter complete address for home collection"></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="testType">Select Test/Package *</label>
+                                <select id="testType" name="testType" required>
+                                    <option value="">-- Select Test or Package --</option>
+                                    <optgroup label="Popular Tests">
+                                        <option value="Thyroid Profile - ₹149">Thyroid Profile - ₹149</option>
+                                        <option value="Liver Function Test - ₹199">Liver Function Test - ₹199</option>
+                                        <option value="Lipid Profile - ₹249">Lipid Profile - ₹249</option>
+                                        <option value="Kidney Function Test - ₹299">Kidney Function Test - ₹299</option>
+                                    </optgroup>
+                                    <optgroup label="Wellness Packages">
+                                        <option value="Package 1 - ₹649">Package 1 (Basic) - ₹649</option>
+                                        <option value="Package 2 - ₹899">Package 2 (Popular) - ₹899</option>
+                                        <option value="Package 3 - ₹1499">Package 3 (Premium) - ₹1499</option>
+                                    </optgroup>
+                                    <optgroup label="Other Tests">
+                                        <option value="CBC - Complete Blood Count">CBC - Complete Blood Count</option>
+                                        <option value="HbA1C">HbA1C (Diabetes Control)</option>
+                                        <option value="Vitamin D">Vitamin D</option>
+                                        <option value="Other">Other (Specify in message)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="collectionDate">Preferred Collection Date *</label>
+                                <input type="date" id="collectionDate" name="collectionDate" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="collectionTime">Preferred Time Slot *</label>
+                                <select id="collectionTime" name="collectionTime" required>
+                                    <option value="">-- Select Time Slot --</option>
+                                    <option value="7:00 AM - 9:00 AM">7:00 AM - 9:00 AM</option>
+                                    <option value="9:00 AM - 11:00 AM">9:00 AM - 11:00 AM</option>
+                                    <option value="11:00 AM - 1:00 PM">11:00 AM - 1:00 PM</option>
+                                    <option value="1:00 PM - 3:00 PM">1:00 PM - 3:00 PM</option>
+                                    <option value="3:00 PM - 5:00 PM">3:00 PM - 5:00 PM</option>
+                                    <option value="5:00 PM - 7:00 PM">5:00 PM - 7:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Instructions (Optional)</label>
+                            <textarea id="message" name="message" placeholder="Any special instructions or requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Submit Booking Request
+                        </button>
+                    
+                           
+                        
+                       
+
+                        <div class="success-message" id="successMessage">
+                            <i class="fas fa-check-circle"></i> Thank you! Your booking request has been submitted successfully. Our team will contact you shortly.
+                        </div>
+                    </form>
+                </div>
+
+                <div class="booking-info">
+                    <div class="info-box">
+                        <h3><i class="fas fa-info-circle"></i> Important Information</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Home collection is available across Lucknow</li>
+                            <li><i class="fas fa-check"></i> Fasting may be required for certain tests</li>
+                            <li><i class="fas fa-check"></i> Reports will be delivered within 24-48 hours</li>
+                            <li><i class="fas fa-check"></i> Please keep your prescription ready (if any)</li>
+                            <li><i class="fas fa-check"></i> Our phlebotomist will carry proper ID and equipment</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h3><i class="fas fa-phone-alt"></i> Need Help?</h3>
+                        <p>Call us directly for immediate booking::::</p>
+                        <div class="phone-numbers">
+                            <a href="tel:8318462292"><i class="fas fa-phone"></i> 8318462292</a>
+                            <a href="tel:7398687342"><i class="fas fa-phone"></i> 7398687342</a>
+                        </div>
+                        <p style="margin-top: 20px;">Or WhatsApp us:</p>
+                        <a href="https://wa.me/918318462292" class="whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
@@ -783,10 +1411,10 @@
                      and affordable healthcare services with state-of-the-art technology and experienced professionals.
                 </p>
                 <div class="social-links">
-                    <a href="https://facebook.com" target="_blank" title="Facebook">
+                    <a href="https://www.facebook.com/share/1BfSjK9tPV/" target="_blank" title="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://instagram.com" target="_blank" title="Instagram">
+                    <a href="https://www.instagram.com/helix_diagnostic_labs?igsh=MW85bDdvcnRneWRyZw" target="_blank" title="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://twitter.com" target="_blank" title="Twitter">
@@ -828,7 +1456,7 @@
                     <li><i class="fas fa-map-marker-alt"></i> B-1/166, Sector-G, Aliganj, Lucknow - 226024</li>
                     <li><i class="fas fa-phone-alt"></i> <a href="tel:8318462292">8318462292</a></li>
                     <li><i class="fas fa-phone-alt"></i> <a href="tel:7398687342">7398687342</a></li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@helixclinic.com">info@helixclinic.com</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:Helixdiagnosticlabs@Gmail.com">Helixdiagnosticlabs@Gmail.com</a></li>
                     <li><i class="fas fa-clock"></i> Mon-Sat: 7 AM - 9 PM<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sun: 7 AM - 2 PM</li>
                 </ul>
             </div>
