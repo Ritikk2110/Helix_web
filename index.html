@@ -8,6 +8,19 @@
       Collection Available
     </title>
 
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
     <!-- SEO Meta Tags -->
     <meta
       name="description"
@@ -45,6 +58,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.helixdiagnostic.in/" />
 
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -74,6 +89,155 @@
     <!-- For Android/Chrome -->
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#2563eb" />
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style" /> 
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Helix Clinic & Diagnostic Labs",
+        "alternateName": "Helix Diagnostic Labs",
+        "description": "Leading pathology and diagnostic lab in Lucknow offering affordable blood tests, health packages, and home sample collection services.",
+        "url": "https://www.helixdiagnostic.in",
+        "logo": "https://www.helixdiagnostic.in/logo.png",
+        "image": "https://www.helixdiagnostic.in/lab-image.jpg",
+        "telephone": "+91-8318462292",
+        "email": "info@helixdiagnostic.in",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Your Street Address Here",
+          "addressLocality": "Aliganj",
+          "addressRegion": "Lucknow",
+          "postalCode": "226024",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "26.8467",
+          "longitude": "80.9462"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "07:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "08:00",
+            "closes": "14:00"
+          }
+        ],
+        "priceRange": "₹149 - ₹1499",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": "Cash, UPI, Credit Card, Debit Card",
+        "areaServed": {
+          "@type": "City",
+          "name": "Lucknow"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Diagnostic Tests",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Thyroid Profile Test",
+                "description": "Complete thyroid function test"
+              },
+              "price": "149",
+              "priceCurrency": "INR"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Liver Function Test",
+                "description": "Complete liver function panel"
+              },
+              "price": "199",
+              "priceCurrency": "INR"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Complete Health Checkup",
+                "description": "Full body health checkup package"
+              },
+              "price": "899",
+              "priceCurrency": "INR"
+            }
+          ]
+        },
+        "sameAs": [
+          "https://www.facebook.com/helixdiagnostic",
+          "https://www.instagram.com/helixdiagnostic",
+          "https://wa.me/918318462292"
+        ]
+      }
+    </script>
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Helix Clinic & Diagnostic Labs",
+        "url": "https://www.helixdiagnostic.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.helixdiagnostic.in/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.helixdiagnostic.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.helixdiagnostic.in/#services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Book Test",
+            "item": "https://www.helixdiagnostic.in/#booking"
+          }
+        ]
+      }
+    </script>
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
