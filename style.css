@@ -1,4 +1,4 @@
-/* ==========================================
+ /* ==========================================
    HELIX CLINIC & DIAGNOSTIC LABS - CSS
    ========================================== */
 
@@ -550,7 +550,7 @@ section {
 
 .price {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 800;
     background: linear-gradient(135deg, var(--primary-blue), var(--violet));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -615,7 +615,8 @@ section {
 }
 
 .wellness-card.featured {
-    background: linear-gradient(135deg, var(--primary-blue), var(--violet));
+   /* background: linear-gradient(135deg, var(--primary-blue), var(--violet));*/
+    background: linear-gradient(135deg, rgba(116, 157, 244, 0.9), rgba(139, 92, 246, 0.9));
     color: white;
     transform: scale(1.05);
     border-color: var(--yellow);
