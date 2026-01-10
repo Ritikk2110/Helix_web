@@ -27,14 +27,14 @@
     z-index: 1;
 }
 
-.gallery-hero h1 {
+.gallery-hero h2 {
     font-size: 2.8rem;
     color: white;
     margin-bottom: 15px;
     font-weight: 700;
 }
 
-.gallery-hero h1 i {
+.gallery-hero h2 i {
     margin-right: 15px;
     color: var(--yellow);
 }
