@@ -381,7 +381,7 @@ console.log(
   "color: #8b5cf6; font-size: 14px; font-style: italic;"
 );
 console.log(
-  "%c📞 Call: 6388110321,6388110321",
+  "%c📞 Call: 7398687342,8318462292",
   "color: #10b981; font-size: 12px;"
 );
 
