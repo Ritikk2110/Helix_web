@@ -174,7 +174,7 @@ function sendToWhatsApp(data) {
 _Booking request from Helix Clinic website_`;
 
   // ✅ CORRECT PHONE NUMBER - Use your actual WhatsApp number
-  const whatsappNumber = "916388110321"; // Replace with your WhatsApp number
+  const whatsappNumber = "918318462292"; // Replace with your WhatsApp number
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     message
