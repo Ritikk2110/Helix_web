@@ -160,6 +160,10 @@
       ]
     }
     </script>
+    <!--write a js about the copy -->
+    <script>
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
 
   </head>
 
@@ -2057,7 +2061,10 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; 2025 <strong>Helix Clinic & Diagnostic Labs</strong>. All
+          <!--add a copyright notice here   -->
+          <!--write a code to add a copyright year automatically-->
+          &copy; <span id="currentYear"></span> <strong>Helix Clinic & Diagnostic Labs</strong>. All Rights Reserved.
+          &copy; <span id="currentYear"></span> <strong>Helix Clinic & Diagnostic Labs</strong>. All
           Rights Reserved.
         </p>
         <p>
