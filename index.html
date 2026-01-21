@@ -161,6 +161,8 @@
     }
     </script>
     <!--write a js about the copy -->
+    <!-- JavaScript to set current year in footer -->
+
     <script>
       document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
@@ -2063,9 +2065,12 @@
         <p>
           <!--add a copyright notice here   -->
           <!--write a code to add a copyright year automatically-->
-          &copy; <span id="currentYear"></span> <strong>Helix Clinic & Diagnostic Labs</strong>. All Rights Reserved.
-          &copy; <span id="currentYear"></span> <strong>Helix Clinic & Diagnostic Labs</strong>. All
-          Rights Reserved.
+          &copy; <span id="currentYear"></span> <strong> 26 Helix Clinic & Diagnostic Labs</strong>. All Rights Reserved.
+          <!-- JavaScript to set current year in footer   -->
+          <script>
+            document.getElementById("currentYear").textContent =
+              new Date().getFullYear();
+          </script>
         </p>
         <p>
           Leading You To Better Health |
