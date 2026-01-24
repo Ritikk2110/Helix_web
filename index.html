@@ -2113,7 +2113,10 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 <strong>Helix Clinic & Diagnostic Labs</strong>. All Rights Reserved.</p>
+          <!--write code for auto change year -->
+
+            <p>&copy; <span id="currentYear"></span> <strong>Helix Clinic & Diagnostic Labs</strong>. All Rights Reserved.</p>
+
             <p>Leading You To Better Health | <a href="#" onclick="showPage('contact')">Privacy Policy</a> | <a href="#"
                     onclick="showPage('contact')">Terms & Conditions</a></p>
             <p style="margin-top: 10px; font-size: 0.85rem;">
@@ -2121,9 +2124,18 @@
                 Medical Tests, Home Collection Lab Service, Blood Test Lucknow, Thyroid Test,
                 Liver Function Test, Kidney Function Test, Best Pathology Lab Lucknow
             </p>
-            <!-- developer credit with copyright autochange year -->
+            <!--write code for auto change year -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const yearElement = document.querySelector(".footer-bottom p:first-child");
+                    if (yearElement) {
+                        yearElement.innerHTML = `&copy; ${new Date().getFullYear()} <strong>Helix Clinic & Diagnostic Labs</strong>. All Rights Reserved.`;
+                    }
+                });
+            </script>
+            <!--developer credit here -->
+             
             <p>Developed by <a href="https://ritikkumar-seven.vercel.app/" target="_blank"> Ritik Kumar|Crevate Technologies</a></p>
-
         </div>
     </footer>
 
