@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navLinks.classList.toggle("active");
     });
   }
-
+/*
   // Mobile Dropdown Toggle
   const dropdownToggles = document.querySelectorAll(".dropdown > a");
   dropdownToggles.forEach((toggle) => {
@@ -80,7 +80,31 @@ document.addEventListener("DOMContentLoaded", function () {
         parent.classList.toggle("active");
       }
     });
+  });*/
+  // Mobile & Touch Dropdown Toggle (FIXED)
+const dropdownToggles = document.querySelectorAll(".dropdown > a");
+
+dropdownToggles.forEach((toggle) => {
+  toggle.addEventListener("click", function (e) {
+    const isTouchDevice =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    if (isTouchDevice) {
+      e.preventDefault();
+      const parent = this.parentElement;
+
+      // Close other dropdowns
+      document.querySelectorAll(".dropdown").forEach((dropdown) => {
+        if (dropdown !== parent) {
+          dropdown.classList.remove("active");
+        }
+      });
+
+      parent.classList.toggle("active");
+    }
   });
+});
+
 
   // Close menu when clicking outside
   document.addEventListener("click", function (event) {
