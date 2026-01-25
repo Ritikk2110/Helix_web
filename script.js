@@ -575,7 +575,7 @@ window.addEventListener("load", function () {
 // ==========================================
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
-    showNotification("Welcome to Helix Clinic! Book your test today. 🏥", "success", 6000);
+    showNotification("Welcome to Helix Diagnostic! Book your test today. 🏥", "success", 6000);
   }, 2000);
 });
 
