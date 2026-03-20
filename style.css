@@ -426,7 +426,7 @@ button {
 
 /* ==================== HERO SECTION ==================== */
 .hero {
-  /*
+  
   background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 50%, var(--white) 100%);
   padding: var(--space-4xl) 0;
   position: relative;
@@ -434,17 +434,33 @@ button {
   min-height: 500px;
   display: flex;
   align-items: center;
-*/
+
   
-    height: 100vh; /* full screen height */
-    background-image: url('l1.jpg'); /* your Canva image */
-    background-size: cover; /* cover full area */
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  
 }
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('l2 (3).jpg');
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(1.55px);
+    z-index: 1;
+}
+/*
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* dark transparent layer/*
+    padding: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+*/
 
 .hero::before {
   content: '';
@@ -478,26 +494,33 @@ button {
   margin: 0 auto;
   padding: 0 var(--space-lg);
   animation: fadeInUp 0.8s ease-out;
+
+  
+
+
 }
 
 .hero h1 {
   font-size: var(--fs-4xl);
   font-weight: 800;
-  color: var(--text-dark);
+  /*color: var(--text-dark);*/
   margin-bottom: var(--space-md);
   line-height: 1.1;
+  color:rgb(255, 169, 8);
 }
 
 .hero .tagline {
   font-size: var(--fs-xl);
-  color: var(--primary);
+ /* color: var(--primary);*/
   font-weight: 600;
   margin-bottom: var(--space-md);
+  color:rgb(0, 0, 0);
 }
 
 .hero p {
   font-size: var(--fs-md);
-  color: var(--text-muted);
+ /* color: var(--text-muted);*/
+ color:rgb(0, 0, 0);
   margin-bottom: var(--space-xl);
 }
 
