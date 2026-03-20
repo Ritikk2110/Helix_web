@@ -426,6 +426,7 @@ button {
 
 /* ==================== HERO SECTION ==================== */
 .hero {
+  /*
   background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 50%, var(--white) 100%);
   padding: var(--space-4xl) 0;
   position: relative;
@@ -433,6 +434,16 @@ button {
   min-height: 500px;
   display: flex;
   align-items: center;
+*/
+  
+    height: 100vh; /* full screen height */
+    background-image: url('l1.jpg'); /* your Canva image */
+    background-size: cover; /* cover full area */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -3171,3 +3182,11 @@ textarea:focus {
 .position-relative { position: relative !important; }
 
 /* ==================== END OF STYLESHEET ==================== */
+
+.l1-container {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+
+
+}
