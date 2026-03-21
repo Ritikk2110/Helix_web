@@ -437,7 +437,7 @@ button {
 
   
   
-}
+}/*
 .bg {
     position: absolute;
     top: 0;
@@ -451,6 +451,31 @@ button {
 
     filter: blur(1.55px);
     z-index: 1;
+}*/
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url('l2 (3).jpg');
+    background-size: cover;
+    background-position: center top; /* ← shows top of image on mobile */
+    background-repeat: no-repeat;
+
+    filter: blur(1.55px);
+    z-index: 1;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+    .bg {
+        background-position: top center; /* focus on top/face area */
+        background-size: cover;
+        filter: blur(1px); /* slightly less blur on small screens */
+    }
 }
 /*
 .overlay {
@@ -463,7 +488,7 @@ button {
 */
 
 .hero::before {
-  content: '';
+ /* content: '';
   position: absolute;
   top: -50%;
   right: -20%;
@@ -471,8 +496,16 @@ button {
   height: 600px;
   background: radial-gradient(circle, rgba(0, 119, 182, 0.08) 0%, transparent 70%);
   border-radius: 50%;
-  animation: float 20s ease-in-out infinite;
+  animation: float 20s ease-in-out infinite;*/
+   content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
 }
+/* write the code for lb image responsiveness and overlay on different screens */
+
+
 
 .hero::after {
   content: '';
